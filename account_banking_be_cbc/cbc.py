@@ -66,8 +66,8 @@ class transaction_line(object):
         self.balance = float(self.balance.replace(',', '.'))
         self.transferred_amount = float(self.transferred_amount.replace(',', '.'))
         self.execution_date = str2date(self.execution_date, '%d/%m/%Y')
-        self.effective_date = str2date(self.effective_date, '%d/%m/%Y')
         self.value_date = str2date(self.effective_date, '%d/%m/%Y')
+        self.effective_date = str2date(self.effective_date, '%d/%m/%Y')
         self.id = str(subno).zfill(4)
 
 class transaction(models.mem_bank_transaction):
